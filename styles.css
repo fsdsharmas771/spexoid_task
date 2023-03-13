@@ -1,0 +1,110 @@
+html {
+    font-size: 10px;
+}
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+}
+.circle {
+    width: 30rem;
+    height: 30rem;
+    border: 7px solid yellow;
+    border-radius: 50%;
+    margin: 50px auto;
+}
+#outer-circle-face {
+    position: relative;
+    background: green;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+#outer-circle-face::after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+#outer-circle-face::after,
+#outer-circle-face::before,
+#outer-circle-face .marking{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: red;
+    z-index: 0;
+    left: 49%;
+}
+#outer-circle-face .marking {
+    background: red;
+    width: 3px;
+}
+
+#outer-circle-face .marking.marking-one {
+    transform: rotate(45deg)
+}
+#outer-circle-face .marking.marking-two {
+    transform: rotate(135deg)
+}
+#pointer{
+    margin-left: 135px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top: 0;
+    border-bottom: 30px solid red;
+}
+.inner-circle-face {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: yellowgreen;
+    border-radius: 100%;
+    z-index: 1;
+}
+.numbers{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+}
+#one{
+    top: -37px;
+    left: 165px;
+}
+#two{
+    top: 39px;
+    left: 242px;
+}
+#three{
+    top: 140px;
+    left: 239px;
+}
+#four{
+    top: 214px;
+    left: 167px;
+}
+#five{
+    top: 212px;
+    left: 62px;
+}
+#six{
+    top: 137px;
+    left: -10px;
+}
+#seven{
+    top: 35px;
+    left: -5px;
+}
+#eight{
+    top: -35px;
+    left: 61px;
+}
+#input{
+    margin-top: 25px;
+    margin-left: 60px;
+}
